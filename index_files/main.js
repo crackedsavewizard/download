@@ -1,0 +1,4 @@
+jQuery(document).ready(function(){jQuery('.os-item').hide();jQuery('.documentation').hide();jQuery('.windows').show();jQuery('#windows').css('background','rgb(230, 243, 255)');jQuery('.hyperkint').show();jQuery('#hyperkint').css('background','rgb(230, 243, 255)');jQuery('.tab-item').on('click',function(){var osName=jQuery(this).attr('id');var selectedOs=jQuery('.'+osName);jQuery('.tab-item').css('background','#fff');jQuery(this).css('background','#f0f5fc');jQuery('.os-item').hide();jQuery('.documentation').hide();jQuery(selectedOs).show();})
+jQuery('.issue-slide').on('click',function(e){e.preventDefault();jQuery(this).parent().find('ul').slideToggle('slow');})
+jQuery('iframe#myIframe').each(function(){var href=jQuery(this).attr('src');if(href.indexOf('?')!==-1){href+='&'+location.search.replace(/^\?/,'');}else{href+=location.search;}
+jQuery(this).attr('src',href);});})
